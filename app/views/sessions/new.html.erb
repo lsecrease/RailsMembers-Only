@@ -1,0 +1,18 @@
+
+<h1>Sign In</h1>
+
+<%= form_for(:session, url: signin_path, html: { class: 'form-general'}) do |f| %>
+  
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <div class='checkbox'>
+    <%= f.check_box :remember_me, style: 'width: 1rem; height: 1rem;' %>
+    <%= f.label :remember_me %>
+  </div>
+
+  <%= f.submit 'Sign in', class: 'btn btn-block btn-primary' %>
+<% end %>
